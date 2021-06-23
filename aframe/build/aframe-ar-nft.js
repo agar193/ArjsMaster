@@ -780,8 +780,6 @@ function load(msg) {
             ar.trackNFTMarkerId(markerId);
             postMessage({ type: 'endLoading' })
         }, function (err) {
-			console.log('cam url', nftMarkerUrl);
-console.log('cam url', markerId);
             console.log('Error in loading marker on Worker', err);
         });
 
