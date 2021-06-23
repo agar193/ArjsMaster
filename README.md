@@ -4,7 +4,7 @@
 <a href="https://xscode.com/nicolocarpignoli/AR.js">
   <img src="./AR-JS-banner.png" />
 </a>
-
+  
 ---
 
 [![Build Status](https://travis-ci.org/jeromeetienne/AR.js.svg?branch=master)](https://travis-ci.org/jeromeetienne/AR.js)
