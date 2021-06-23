@@ -767,8 +767,7 @@ function load(msg) {
     var onLoad = function () {
         ar = new ARController(msg.pw, msg.ph, param);
         var cameraMatrix = ar.getCameraMatrix();
-console.log('cam url', nftMarkerUrl);
-console.log('cam url', markerId);
+
         // after the ARController is set up, we load the NFT Marker
         var regexM = /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#()?&//=]*)/igm
         var reM = regexM.test(msg.marker);
@@ -781,7 +780,9 @@ console.log('cam url', markerId);
             ar.trackNFTMarkerId(markerId);
             postMessage({ type: 'endLoading' })
         }, function (err) {
-            console.log('Error in loading marker on Worker', err)
+			console.log('cam url', nftMarkerUrl);
+console.log('cam url', markerId);
+            console.log('Error in loading marker on Worker', err);
         });
 
         // ...and we listen for event when marker has been found from camera
