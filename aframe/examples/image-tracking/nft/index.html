@@ -36,14 +36,24 @@
 
         <!-- use rawgithack to retrieve the correct url for nft marker (see 'pinball' below) -->
         <a-nft
-            type='nft' url='https://agar193.github.io/ArjsMaster/aframe/examples/image-tracking/nft/trex/trex-image/trex'
+            type='nft' 
+			<!-- url='https://agar193.github.io/ArjsMaster/aframe/examples/image-tracking/nft/trex/trex-image/trex' -->
+			url='https://agar193.github.io/ArjsMaster/data/dataNFT/cube' 
             smooth='true' smoothCount='10' smoothTolerance='0.01' smoothThreshold='5'>
-            <a-entity
+            <!--<a-entity
                 gltf-model='https://agar193.github.io/ArjsMaster/aframe/examples/image-tracking/nft/trex/scene.gltf'
                 scale="5 5 5"
                 position="150 300 -100"
                 >
-            </a-entity>
+            </a-entity>-->
+			<a-entity>
+				<a-box
+            id="objCube"
+            animation="property: rotation; from:0 0 -25; to: 0 360 -25; dur: 5000; easing: linear;  loop: true"
+			position="150 300 -100"
+            color="tomato"
+          ></a-box>
+			</a-entity>
         </a-nft>
 		<a-entity camera></a-entity>
     </a-scene>
