@@ -33,24 +33,22 @@
         vr-mode-ui='enabled: false;'
         renderer="logarithmicDepthBuffer: true;"
         embedded arjs='trackingMethod: best; sourceType: webcam; debugUIEnabled: false;'>
-
+<a-assets>
+    <a-asset-item id="tree-obj" src="https://agar193.github.io/ArjsMaster/aframe/examples/image-tracking/nft/trex/Cube.obj"></a-asset-item>
+    <a-asset-item id="tree-mtl" src="https://agar193.github.io/ArjsMaster/aframe/examples/image-tracking/nft/trex/Cube.mtl"></a-asset-item>
+  </a-assets>
         <!-- use rawgithack to retrieve the correct url for nft marker (see 'pinball' below) -->
         <a-nft
-            type='nft' 			url='https://agar193.github.io/ArjsMaster/data/dataNFT/cube' 
+            type='nft' 			url='https://agar193.github.io/ArjsMaster/data/dataNFT/pinball' 
             smooth='true' smoothCount='10' smoothTolerance='0.01' smoothThreshold='5'>
-            <!--<a-entity
-                gltf-model='https://agar193.github.io/ArjsMaster/aframe/examples/image-tracking/nft/trex/scene.gltf'
+            <a-entity
+                obj-model="obj: #tree-obj; mtl: #tree-mtl"
                 scale="5 5 5"
                 position="150 300 -100"
                 >
-            </a-entity>-->
+            </a-entity>
 			<a-entity>
-				<a-box
-            id="objCube"
-            animation="property: rotation; from:0 0 -25; to: 0 360 -25; dur: 5000; easing: linear;  loop: true"
-			position="150 300 -100"
-            color="tomato"
-          ></a-box>
+				
 			</a-entity>
         </a-nft>
 		<a-entity camera></a-entity>
