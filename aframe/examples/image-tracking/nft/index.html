@@ -36,22 +36,18 @@
 <a-assets>
     <a-asset-item id="tree-obj" src="https://agar193.github.io/ArjsMaster/aframe/examples/image-tracking/nft/trex/Cube.obj"></a-asset-item>
     <a-asset-item id="tree-mtl" src="https://agar193.github.io/ArjsMaster/aframe/examples/image-tracking/nft/trex/Cube.mtl"></a-asset-item>
-  </a-assets>
+	<a-asset-item id="cube" src="https://agar193.github.io/ArjsMaster/aframe/examples/image-tracking/nft/trex/Cube.gltf"> </a-asset-item>
+	</a-assets>
         <!-- use rawgithack to retrieve the correct url for nft marker (see 'pinball' below) -->
         <a-nft
             type='nft' 			url='https://agar193.github.io/ArjsMaster/data/dataNFT/pinball' 
             smooth='true' smoothCount='10' smoothTolerance='0.01' smoothThreshold='5'>
-            <a-entity
-                 <a-entity obj-model="obj: #tree-obj; mtl: #tree-mtl"></a-entity>
+            
+  <a-gltf-model src="#cube"></a-gltf-model>
 
 
-                scale="2 2 2"
-                
-                >
-            </a-entity>
-			<a-entity>
-				<iframe id="b8a7c7f3-4e0e-4c0d-9213-3aa9f036ae04" src="https://www.vectary.com/viewer/v1/?model=b8a7c7f3-4e0e-4c0d-9213-3aa9f036ae04&env=studio3" frameborder="0" width="100%" height="480"></iframe>
-			</a-entity>
+             
+		
         </a-nft>
 		<a-entity camera></a-entity>
     </a-scene>
